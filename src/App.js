@@ -275,8 +275,6 @@ function App() {
     }
     if (cellContainsValue && !isGameOver) {
       setGameOn(true);
-    } else {
-      setGameOn(false);
     }
   }, [isGameOn, isGameOver, cell]);
 
