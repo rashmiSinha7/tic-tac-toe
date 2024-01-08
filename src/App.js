@@ -119,24 +119,24 @@ function App() {
               updated[0][0] = turnSelected === "X" ? "O" : "X";
               cellupdated = true;
             }
-          } else if (cell[0][2] == cell[0][0]) {
+          } else if (cell[2][2] == cell[0][0]) {
             if (!updated[1][1]) {
               updated[1][1] = turnSelected === "X" ? "O" : "X";
               cellupdated = true;
             }
-          } else if (cell[0][2] == cell[1][1]) {
-            if (!updated[2][0]) {
-              updated[2][0] = turnSelected === "X" ? "O" : "X";
-              cellupdated = true;
-            }
-          } else if (cell[1][1] == cell[0][2]) {
+          } else if (cell[1][1] == cell[2][0]) {
             if (!updated[0][2]) {
               updated[0][2] = turnSelected === "X" ? "O" : "X";
               cellupdated = true;
             }
-          } else if (cell[0][0] == cell[0][2]) {
+          } else if (cell[2][0] == cell[0][2]) {
             if (!updated[1][1]) {
               updated[1][1] = turnSelected === "X" ? "O" : "X";
+              cellupdated = true;
+            }
+          } else if(cell[2][0] == cell[1][1]){
+            if (!updated[0][2]) {
+              updated[0][2] = turnSelected === "X" ? "O" : "X";
               cellupdated = true;
             }
           }
