@@ -21,7 +21,8 @@ function Board(props) {
               {items.map((item, j) => {
                 
                 return (
-                  <div className={strikeCells[i][j]?"board-cell-selected":"board-cell"} onClick={()=>{
+                  <div className={strikeCells[i][j]?"board-cell-selected":"board-cell"} onClick={(e)=>{
+                    e.stopPropagation()
                     onClickCellGuest(i,j)
                 }}>
                     {item == "X" || item == "O" ? item : ""}
